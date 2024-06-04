@@ -1,5 +1,8 @@
-
+// Ashok IT -> Lecture 2
 // LinearSearch in array -> in this code we will search the elemnet in the array whether it is present or not.
+
+
+// if array is Sorted -> then we can add one more condition, that is when element of array becomes greater than the key then we can return false.
 
 class Program {
 
