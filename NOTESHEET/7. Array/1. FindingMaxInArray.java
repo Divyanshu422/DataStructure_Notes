@@ -1,3 +1,5 @@
+// Ashok IT -> Lecture 2
+
 // finding the maximum in the given array
 
 class Program {
