@@ -3,7 +3,7 @@
             Method used in solving the proble -> charAt() and length()
 */
 
-class Program1 {
+class Program2 {
     public static void DigitSumString(String str) {
         /*
          * Since the input to the method is String -> So there is 2 method used in
