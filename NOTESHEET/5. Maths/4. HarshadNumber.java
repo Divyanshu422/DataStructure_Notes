@@ -5,6 +5,8 @@
  * eg: 18 => sum of digit is 9 and 18/9 => 2. hence 18 is harshad number
  */
 
+//  ! Note: in the function/methods before changing the number it is vital to save it to the variable. 
+
 class Program4 {
     public static boolean HarshadNumber(int number) {
         // * Storing the original number into the variable */
