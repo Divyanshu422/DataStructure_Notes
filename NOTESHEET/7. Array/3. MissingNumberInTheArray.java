@@ -4,6 +4,8 @@
 */
 
 //  Brute force approach
+//  2nd approach: sorting 
+// 3rd approach  -> Sum of the number from 1 to n and subtracting the array element with the sum
 
 class Program1 {
 
@@ -28,3 +30,24 @@ class Program1 {
         System.out.println("The missing number in the array is " + findMissing(arr));
     }
 }
+
+// !
+// =======================================================================================================
+/*
+ * More optimised solution with time complexity is o(n)
+ */
+
+// class Solution {
+// public int missingNumber(int[] nums) {
+// int length = nums.length;
+// int expectedSum = length * (length + 1) / 2; // Correct formula for sum of 0
+// to n
+// int actualSum = 0;
+
+// for (int i = 0; i < nums.length; i++) {
+// actualSum += nums[i];
+// }
+
+// return expectedSum - actualSum;
+// }
+// }

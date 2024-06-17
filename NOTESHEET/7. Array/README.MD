@@ -1,3 +1,3 @@
-# Finding the missing number in the array
+# Finding the missing number in the array => 3 approach -> all done
 
-- The array contains number from 1 to 10 and one of the number is missing.
+# Finding the unique number in the array => 3/4 apprach but only brute done
