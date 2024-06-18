@@ -3,6 +3,9 @@
  *          2 3 
  *          4 5 6
  *          7 8 9 10
+ * 
+ * Note:
+ *  printingCharacter is increasing at every iteration and independent of row and column 
  */
 
 import java.util.Scanner;
