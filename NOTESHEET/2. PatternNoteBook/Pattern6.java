@@ -8,6 +8,12 @@
  *                  A B C D E D C B A
  */
 
+/*
+ *     n => numbers of rows 
+ *     number of rows: n 
+ *     number of column: 2r-1 => r + (r-1);
+ !     Ashok IT Lecture 10 -> Notability Page (1 and 2)      
+ */
 import java.util.Scanner;
 
 class Program {
@@ -15,7 +21,6 @@ class Program {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the number of rows: ");
         int row = scan.nextInt();
-
         for (int i = 0; i < row; i++) {
             int ch = 'A';
             for (int j = 0; j <= i; j++) {
