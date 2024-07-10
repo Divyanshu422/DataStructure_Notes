@@ -7,6 +7,7 @@
  * 
  */
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 class CustomArrayList {
@@ -34,18 +35,13 @@ class CustomArrayList {
         if (index >= this.obj.length) {
             // calculating the newSize
             int newSize = (this.obj.length + (this.obj.length / 2));
-            // creating new object array with the new size
-            Object[] newObject = new Object[newSize];
-            // copying the old object array to new object array
-            for (int i = 0; i < this.obj.length; i++) {
-                newObject[i] = this.obj[i];
-            }
-            // assigning the new object array to the old object array
+            
+            // Using the Arrays.copy method => which takes old array, newSize of array and return the new array in which size is increased and old 
+            // array data is copied 
+            Object[] newObject = Arrays.copyOf(this.obj, newSize);
             this.obj = newObject;
         }
         this.obj[index] = obj;
-        System.out.println(index);
-        System.out.println(this.obj);
         index++;
     }
 
