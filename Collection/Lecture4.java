@@ -50,6 +50,15 @@ class Program4 {
         return printString.toString(); // Calls StringBuilder's toString method
     }
 
+    // Implementing the get method -> which consume the index and return the data
+    public Object get(int indexing) {
+        if (indexing < 0 || indexing >= this.obj.length) {
+            // since the return type is object so we need to throw the String
+            throw new IndexOutOfBoundsException("Index: " + indexing + ", Size: " + this.obj.length);
+        }
+        return this.obj[indexing];
+    }
+
     public static void main(String[] args) {
         Program4 cl = new Program4(3);
         cl.add("Hello");
@@ -59,6 +68,10 @@ class Program4 {
         cl.add("Program1");
         cl.add("Program2");
         // System.out.println("Printing the object " + cl);
-        System.out.println("The output is " + cl.toString());
+        System.out.println("The output is " + cl.toString()); // The output is [Hello, World, Java, Program, Program1,
+                                                              // Program2]
+        System.out.println(cl.get(2)); // Java
+        System.out.println(cl.get(50)); // Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 50,
+                                        // Size: 6 at Program4.get(Lecture4.java:56) at Program4.main(Lecture4.java:72)
     }
 }
