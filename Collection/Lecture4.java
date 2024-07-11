@@ -50,13 +50,22 @@ class Program4 {
         return printString.toString(); // Calls StringBuilder's toString method
     }
 
-    // Implementing the get method -> which consume the index and return the data
     public Object get(int indexing) {
         if (indexing < 0 || indexing >= this.obj.length) {
-            // since the return type is object so we need to throw the String
             throw new IndexOutOfBoundsException("Index: " + indexing + ", Size: " + this.obj.length);
         }
         return this.obj[indexing];
+    }
+
+    /*
+     * calculating the length of the arrayList.
+     * In the arrayList to get the length we have the size method not the length
+     * method
+     * because the length method is used to get the length of the object.
+     */
+    public int size() {
+        // the object has inbuilt length method that is the reason the arrayList method => is caleed as size not the length.
+        return this.obj.length;
     }
 
     public static void main(String[] args) {
@@ -67,11 +76,9 @@ class Program4 {
         cl.add("Program");
         cl.add("Program1");
         cl.add("Program2");
-        // System.out.println("Printing the object " + cl);
-        System.out.println("The output is " + cl.toString()); // The output is [Hello, World, Java, Program, Program1,
-                                                              // Program2]
-        System.out.println(cl.get(2)); // Java
-        System.out.println(cl.get(50)); // Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 50,
-                                        // Size: 6 at Program4.get(Lecture4.java:56) at Program4.main(Lecture4.java:72)
+        System.out.println("The output is " + cl.toString());
+        System.out.println(cl.get(2));
+        // System.out.println(cl.get(50));
+        System.out.println(cl.size()); // 6
     }
 }
