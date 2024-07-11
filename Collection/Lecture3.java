@@ -1,3 +1,4 @@
+
 /*
  * Creating the Internal Implementation of arrayList
      * 1. Internally arrayList store the data in the array of object  -> Declaring the array of object in [[ Line 18 ]]
@@ -35,9 +36,10 @@ class CustomArrayList {
         if (index >= this.obj.length) {
             // calculating the newSize
             int newSize = (this.obj.length + (this.obj.length / 2));
-            
-            // Using the Arrays.copy method => which takes old array, newSize of array and return the new array in which size is increased and old 
-            // array data is copied 
+
+            // Using the Arrays.copy method => which takes old array, newSize of array and
+            // return the new array in which size is increased and old
+            // array data is copied
             Object[] newObject = Arrays.copyOf(this.obj, newSize);
             this.obj = newObject;
         }
@@ -52,7 +54,15 @@ class CustomArrayList {
         cl.add("Java");
         cl.add("Program");
         cl.add("Program1");
+        
         cl.add("Program2");
-        System.out.println("code run successfully");
+
+        /* 
+            * When ever we are trying to print the object toString method is called which
+            * returns the hashcode of the object. 
+            * In Object class there is an toString method which return:
+                    * packageName + className + @ + HashCode
+        */
+        System.out.println("Printing the object " + cl); // Printing the object CustomArrayList@7344699f
     }
 }
