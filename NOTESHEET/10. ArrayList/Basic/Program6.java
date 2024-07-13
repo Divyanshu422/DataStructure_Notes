@@ -18,10 +18,17 @@ class Program6 {
         arrList.add(14);
         arrList.add(76);
         arrList.add(45);
+
         System.out.println("the result before sorting " + arrList); // * the result before sorting [10, 90, 2, 22, 14,
                                                                     // 76, 45]
         Collections.sort(arrList);
         System.out.println("the result after sorting " + arrList); // * the result after sorting [2, 10, 14, 22, 45, 76,
                                                                    // 90]
+
+        Collections.sort(arrList, Collections.reverseOrder());
+
+        System.out.println("the reverse order sorting " + arrList); // * the reverse order sorting [90, 76, 45, 22, 14,
+                                                                    // 10, 2]
+
     }
 }
