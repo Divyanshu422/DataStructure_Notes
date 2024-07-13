@@ -42,3 +42,7 @@
 ## Sheet 9:
 
     - Brute solution of Container with maximum water
+
+## Sheet 10:
+
+    - Optimised solution of Container with maximum water: using the 2 pointer approach
