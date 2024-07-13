@@ -22,3 +22,7 @@
     - Correct approach would be
 
         ![Image](./Image/1.%20CorrectApproachForAddingElement.jpeg
+
+## Sheet 4:
+
+    - Maximum in an ArrayList
