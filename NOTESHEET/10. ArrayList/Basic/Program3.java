@@ -27,5 +27,11 @@ class Program3 {
         arrList.add(8, 80); // ! This line will throw an IndexOutOfBoundsException
         System.out.println(arrList); // ! Error
 
+        /*
+         * Correct Approach
+         * Mention in readMe.md file or
+         * Image folder => 1.CorrectApproachForAddingElement.png
+         */
+
     }
 }
