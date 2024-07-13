@@ -30,3 +30,7 @@
 ## Sheet 5:
 
     - Swap 2 number with index given: we have not used static method + for swapping in the AL we have used the set() method
+
+## Sheet 6:
+
+    - Sorting the ArrayList using the Collections class in which we have sort method

@@ -16,7 +16,8 @@ class Program5 {
 
     public void swapValue(ArrayList<Integer> input, int index1, int index2) {
         int temp = input.get(index2);
-        // * */ Assigning the value using the set Method
+        // * Assigning the value using the set Method => which take 2 parameter index
+        // and value
         input.set(index2, input.get(index1));
         input.set(index1, temp);
 
