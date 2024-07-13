@@ -1,58 +1,40 @@
+
 /*
- *  Container with maximum water
- *  Problem: given an arrayList. make a container in which we can have maximum water
- *              maximum water = (width * height)
- *              input => [1, 8, 6, 2, 5, 4, 8, 3, 7]
-      
-        * Time complexity -> bigO(n): using 2 pointer
- * 
+ * Pair sum problem in sorted list
+ *      1. Brute Force approach: traverse for all the pair 
+ *          -> outer loop: i = 0 to n
+ *          -> Inner Loop: j = i+1 to n
  */
 
 import java.util.ArrayList;
 
-class Program10 {
-
-    // Defining the method
-    public static int maxArea(ArrayList<Integer> data) {
-        // Initialising the 2 pointer => pointing to the start and end of the array,
-        // respectively.
-        int left = 0;
-        int right = data.size() - 1;
-        // Initializing the variable to keep track of area:
-        int maxArea = 0;
-
-        // Calculating the till pointer crosses each other:
-        while (left < right) {
-            int width = right - left;
-            int height = Math.min(data.get(left), data.get(right));
-            int area = width * height;
-
-            // Checking the maxArea and the area comparison
-            if (area > maxArea)
-                maxArea = area;
-
-            if (data.get(left) < data.get(right)) {
-                left++;
-            } else {
-                right--;
+class Program {
+    public static boolean pairSum(ArrayList<Integer> list, int target) {
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i + 1; j < list.size(); j++) {
+                if (list.get(i) + list.get(j) == target) {
+                    System.out.println(" the pair are " + list.get(i) + " and " + list.get(j));
+                    return true;
+                }
             }
         }
-        return maxArea;
+        return false;
     }
 
     public static void main(String[] args) {
         ArrayList<Integer> arrList = new ArrayList<>();
-        arrList.add(1);
-        arrList.add(8);
-        arrList.add(6);
-        arrList.add(2);
-        arrList.add(5);
-        arrList.add(4);
-        arrList.add(8);
-        arrList.add(3);
-        arrList.add(7);
-
-        System.out.println(" the maximum water that can be stored is " + maxArea(arrList) + "unit");
+        // Adding the elements in sorting order
+        arrList.add(10);
+        arrList.add(20);
+        arrList.add(30);
+        arrList.add(40);
+        arrList.add(50);
+        arrList.add(60);
+        arrList.add(70);
+        arrList.add(80);
+        arrList.add(90);
+        int target = 120;
+        System.out.println(pairSum(arrList, target));
 
     }
 }
