@@ -9,6 +9,7 @@
                 * remove method
                 * set method => add particular index
                 * contains method 
+                * size method -> similary to the length property in array
 */
 
 //  Importing the package of arrayList
@@ -48,6 +49,22 @@ class Program1 {
             System.out.println("ArrayList contains 'Orange'");
         } else {
             System.out.println("ArrayList does not contain 'Orange'");
+        }
+
+        // ! Size method
+
+        int sizeOfAL = fruits.size();
+        System.out.println("The size of the ArrayList is " + sizeOfAL); // * The size of the ArrayList is 5 */
+
+        for (String fruit : fruits) {
+            System.out.print(" " + fruit); // Apple Banana Pineapple Guava pomegranate
+        }
+        System.out.println();
+
+        int i = 0;
+        while (i < fruits.size()) {
+            System.out.print(" " + fruits.get(i)); // * */ Apple Banana Pineapple Guava pomegranate
+            i++;
         }
 
     }
