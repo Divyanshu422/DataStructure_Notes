@@ -35,6 +35,10 @@
 
     - Sorting the ArrayList using the Collections class in which we have sort method
 
-## Sheet 7:
+## Sheet 7 and 8:
 
     - 2D arrayList
+
+## Sheet 9:
+
+    - Brute solution of Container with maximum water
