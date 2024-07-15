@@ -3,7 +3,7 @@
         *  Node class creation
  */
 
- class LinkedList {
+class LinkedList {
     // In Java, if you don't explicitly define the access modifier for a class, it
     // is given the default access modifier, which is package-private.
     public static class Node {
@@ -24,10 +24,10 @@
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
-        ll.head = new Node(10);
-        ll.head.next = new Node(20);
-        ll.head.next.next = new Node(30);
-        ll.head.next.next.next = new Node(40);
+        // ll.head = new Node(10);
+        // ll.head.next = new Node(20);
+        // ll.head.next.next = new Node(30);
+        // ll.head.next.next.next = new Node(40);
         System.out.println(ll); // * LinkedList@6b95977 */
     }
 }
