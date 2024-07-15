@@ -33,6 +33,22 @@ class Program2 {
         return;
     }
 
+    public void addLast(int data) {
+        // Step 1: Creating the Node:
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        // * Step 2: linking the tail to the newNode
+        tail.next = newNode;
+        // * Step 3: changing the position of tail
+        tail = newNode;
+        return;
+
+    }
+
     public static void main(String[] args) {
         Program2 ll = new Program2();
         ll.addFirst(10);
