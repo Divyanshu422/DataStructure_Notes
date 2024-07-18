@@ -8,6 +8,8 @@
  * 
  */
 
+import java.util.Arrays;
+
 class CustomArrayList {
    // Creating the arrayList
    Object[] arrObj = null;
@@ -30,11 +32,24 @@ class CustomArrayList {
          int size = arrObj.length + arrObj.length / 2;
          Object[] arrObj1 = new Object[size];
          // Copying the data from old object to new
-         int i = 0;
-         for (Object data : arrObj) {
-            arrObj1[i] = data;
-            i++;
-         }
+         /*
+          * int i = 0;
+          * for (Object data : arrObj) {
+          * arrObj1[i] = data;
+          * i++;
+          * }
+          */
+         /*
+          * Rather than using the for loop for copying the element of old array to
+          * newArray => we could have used
+          * Arrays class in which there is copyOf method for copying the element from old
+          * array to new array
+          * Arrays.copyOf(- , -): takes 2 parameter =>
+          * 1. First being the old array
+          * 2. new Length. the Arrays.copyOf(- , -) return the new array
+          */
+         arrObj1 = Arrays.copyOf(arrObj, size);
+
          // Assing the new array to the old array
          arrObj = arrObj1;
       }
@@ -43,7 +58,7 @@ class CustomArrayList {
    }
 
    public static void main(String[] args) {
-      CustomArrayList obj = new CustomArrayList(2);
+      CustomArrayList obj = new CustomArrayList(5);
       obj.add(10);
       obj.add(20);
       obj.add(30);
