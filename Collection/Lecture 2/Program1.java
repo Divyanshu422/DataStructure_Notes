@@ -24,11 +24,37 @@ class CustomArrayList {
    }
 
    public void add(Object obj) {
+      // what if object array is filled
+      if (index >= arrObj.length) {
+         // creating the new array
+         int size = arrObj.length + arrObj.length / 2;
+         Object[] arrObj1 = new Object[size];
+         // Copying the data from old object to new
+         int i = 0;
+         for (Object data : arrObj) {
+            arrObj1[i] = data;
+            i++;
+         }
+         // Assing the new array to the old array
+         arrObj = arrObj1;
+      }
       arrObj[index] = obj;
       index++;
    }
 
    public static void main(String[] args) {
+      CustomArrayList obj = new CustomArrayList(2);
+      obj.add(10);
+      obj.add(20);
+      obj.add(30);
+      obj.add(40);
+      obj.add(50);
+      obj.add(60);
+      obj.add(70);
+      obj.add(80);
+      obj.add(90);
+      obj.add(100);
+      obj.add(110);
 
    }
 }
