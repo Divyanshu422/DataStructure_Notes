@@ -37,6 +37,7 @@ class Program4 {
         printString.append("[");
         for (int i = 0; i < index; i++) {
             printString.append(this.obj[i]);
+            // checking whether arrayList is empty or next element is null
             if (i < this.obj.length - 1 && this.obj[i + 1] != null) {
                 printString.append(", ");
             }
@@ -50,7 +51,11 @@ class Program4 {
         return printString.toString(); // Calls StringBuilder's toString method
     }
 
+    // * the return type of get method is Object becoz we are storing the data in
+    // arrayList as object
     public Object get(int indexing) {
+        // * checking if index is less than 0 and greater then the length -> throw
+        // exeception
         if (indexing < 0 || indexing >= this.obj.length) {
             throw new IndexOutOfBoundsException("Index: " + indexing + ", Size: " + this.obj.length);
         }
@@ -60,11 +65,13 @@ class Program4 {
     /*
      * calculating the length of the arrayList.
      * In the arrayList to get the length we have the size method not the length
-     * method
-     * because the length method is used to get the length of the object.
+     * method. The internal implementation of arrayList is Object_Array. so to
+     * get the length of array we use the Length_Property.
      */
     public int size() {
-        // the object has inbuilt length method that is the reason the arrayList method => is caleed as size not the length.
+        // the array object has inbuilt length method that is the reason the arrayList
+        // method
+        // => is caleed as size not the length.
         return this.obj.length;
     }
 
@@ -75,10 +82,10 @@ class Program4 {
         cl.add("Java");
         cl.add("Program");
         cl.add("Program1");
-        cl.add("Program2");
+        // cl.add("Program2");
         System.out.println("The output is " + cl.toString());
         System.out.println(cl.get(2));
         // System.out.println(cl.get(50));
-        System.out.println(cl.size()); // 6
+        System.out.println(cl); // 6
     }
 }

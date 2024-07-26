@@ -54,15 +54,15 @@ class CustomArrayList {
         cl.add("Java");
         cl.add("Program");
         cl.add("Program1");
-        
+
         cl.add("Program2");
 
-        /* 
-            * When ever we are trying to print the object toString method is called which
-            * returns the hashcode of the object. 
-            * In Object class there is an toString method which return:
-                    * packageName + className + @ + HashCode
-        */
+        /*
+         * When ever we are trying to print the object toString method is called which
+         * returns the hashcode of the object.
+         * In Object class there is an toString method which return:
+         * packageName + className + @ + HashCode
+         */
         System.out.println("Printing the object " + cl); // Printing the object CustomArrayList@7344699f
     }
 }
