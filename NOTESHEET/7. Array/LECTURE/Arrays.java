@@ -1,5 +1,6 @@
 /*
  * Default value stored in the array
+ * Implementing the for_each loop to print the element of the array
  */
 class Array1 {
 
@@ -20,6 +21,12 @@ class Array1 {
         System.out.println();
         System.out.println();
         System.out.println();
+
+        int[] arr = { 10, 20, 30, 40, 50, 60 };
+        // For each loop for traversing the array
+        for (int data : arr) {
+            System.out.print(data + ", ");
+        }
     }
 
 }
