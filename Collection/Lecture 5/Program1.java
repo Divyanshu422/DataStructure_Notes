@@ -4,9 +4,7 @@
  *          2. After removing the element (30), AL becomes =>  10 -> 20 -> 40 -> 50 -> 60   [[ size: 5 ]]
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 class Program1 {
     Object[] obj = null;
@@ -56,15 +54,33 @@ class Program1 {
         return this.obj.length;
     }
 
-    /* Remove method */
-    public Object remove(int indexToBeDeleted) {
+    /*
+     * Remove method: Since we are storing the Object so the return type is object
+     */
+
+    public Object removeOld(int indexToBeDeleted) {
         if (indexToBeDeleted < 0 || indexToBeDeleted >= index)
             return null;
         // Returning the removedElement
         Object removedElement = this.obj[indexToBeDeleted];
+        // * Traversing the AL From indexToBeDeleted to length => & performing the left
+        // Shift operation
         for (int i = indexToBeDeleted; i < index - 1; i++) {
             this.obj[i] = this.obj[i + 1];
         }
+
+        // * Removing the index */
+        index--;
+        return removedElement;
+    }
+
+    public Object removeNew(int indexToBeDeleted) {
+        if (indexToBeDeleted < 0 || indexToBeDeleted >= index)
+            return null;
+        // Returning the removedElement
+        Object removedElement = this.obj[indexToBeDeleted];
+        int CopiedSize = this.obj.length - indexToBeDeleted - 1;
+        System.arraycopy(this.obj, indexToBeDeleted + 1, this.obj, indexToBeDeleted, CopiedSize);
         index--;
         return removedElement;
     }
@@ -82,7 +98,7 @@ class Program1 {
         // // System.out.println(cl.get(50));
         // System.out.println(cl.size()); // 6
         System.out.println(cl.toString()); // * [ Hello, World, Java, Program, Program1, Program2 ] */
-        System.out.println(cl.remove(2)); // * Java */
+        System.out.println(cl.removeNew(2)); // * Java */
         System.out.println(cl.toString());
     }
 }
