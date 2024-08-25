@@ -19,6 +19,7 @@ class Program {
 }
 
 /*
- *    table[1] -> Node(hash=456, key="key2", value="value2", next=Node  (hash=789, key="key3", value="value3", next=null))
+ * table[1] -> Node(hash=456, key="key2", value="value2", next=Node (hash=789,
+ * key="key3", value="value3", next=null))
  * 
  */
