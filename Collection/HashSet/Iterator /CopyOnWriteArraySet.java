@@ -1,10 +1,12 @@
-import java.util.HashSet;
+
+// import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
-class Program6 {
+class Program7 {
     public static void main(String[] args) {
-        Set<Integer> setObj = new HashSet<>();
+        Set<Integer> setObj = new CopyOnWriteArraySet<>();
         // * the set method return the boolean value as shown when we add 40 */
         setObj.add(10);
         setObj.add(20);
