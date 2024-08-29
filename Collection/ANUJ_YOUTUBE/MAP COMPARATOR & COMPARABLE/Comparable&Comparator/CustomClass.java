@@ -11,4 +11,9 @@ class Animal {
         this.age = age;
     }
 
+    // * to String method
+    public String toString() {
+        return "Animal { age : " + age + ", name " + name + ", weight " + weight + "}";
+    }
+
 }
