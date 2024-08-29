@@ -1,3 +1,4 @@
+
 class Animal {
     // Field variables
     private String name;
@@ -13,7 +14,7 @@ class Animal {
 
     // * to String method
     public String toString() {
-        return "Animal { age : " + age + ", name " + name + ", weight " + weight + "}";
+        return "Animal { age : " + age + ", name " + name + ", weight " + weight + "/n" + "}";
     }
 
 }
