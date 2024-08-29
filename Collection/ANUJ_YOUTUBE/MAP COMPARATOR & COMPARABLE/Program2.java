@@ -27,5 +27,18 @@ class Program2 {
         Collection<Integer> valueObj = mapObj.values();
         System.out.println(valueObj);
 
+        // * Extracting the Enteries
+        Set<Map.Entry<String, Integer>> entryObj = mapObj.entrySet();
+        System.out.println(entryObj); // * [Guava=200, Apple=400, Orange=100, Banana=300]
+
+        for (Map.Entry<String, Integer> entry : entryObj) {
+            System.out.println(entry);
+        }
+        /*
+         * Guava=200
+         * Apple=400
+         * Orange=100
+         * Banana=300
+         */
     }
 }
