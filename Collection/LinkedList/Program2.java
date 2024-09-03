@@ -7,7 +7,8 @@ class Program2 {
         cstObj.addNode(30);
         cstObj.addNode(40);
         cstObj.addNode(50);
+        cstObj.addFirst(60);
         // Printing the Custom List using toString method
-        System.out.println(cstObj);
+        System.out.println(cstObj); // * [ 60, 10, 20, 30, 40, 50 ]
     }
 }

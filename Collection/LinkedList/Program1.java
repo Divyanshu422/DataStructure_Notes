@@ -37,6 +37,16 @@ class CustomList {
         size++;
     }
 
+    public void addFirst(Object data) {
+        CustomNode nodeObj = new CustomNode(data);
+        if (head == null)
+            head = nodeObj;
+        else {
+            nodeObj.next = head;
+            head = nodeObj;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -53,6 +63,7 @@ class CustomList {
             sb.append(" ]");
         }
         return sb.toString();
+        // * return sb.toString().concat(" ] ")
     }
 
 }
