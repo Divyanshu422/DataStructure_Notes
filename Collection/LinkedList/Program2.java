@@ -10,5 +10,6 @@ class Program2 {
         cstObj.addFirst(60);
         // Printing the Custom List using toString method
         System.out.println(cstObj); // * [ 60, 10, 20, 30, 40, 50 ]
+        System.out.println(cstObj.size);
     }
 }

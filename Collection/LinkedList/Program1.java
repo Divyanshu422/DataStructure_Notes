@@ -45,6 +45,7 @@ class CustomList {
             nodeObj.next = head;
             head = nodeObj;
         }
+        size++;
     }
 
     @Override
