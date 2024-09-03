@@ -21,7 +21,15 @@ class Program1 {
 
         int[] arr = { 50, 20, 30, 10, 40 };
         bubbleSort(arr);
-        System.out.println("Sorted Array data is " + Arrays.toString(arr));
+        // * System.out.println("Sorted Array data is " + Arrays.toString(arr));
         // Sorted Array data is [10, 20, 30, 40, 50]
+
+        /*
+         * Stream way to represent the array
+         */
+
+        Arrays.stream(arr).forEach(element -> {
+            System.out.print(element + "->");
+        });
     }
 }
