@@ -1,6 +1,6 @@
 
 class Program2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         CustomList cstObj = new CustomList();
         cstObj.addNode(10);
         cstObj.addNode(20);
@@ -11,5 +11,6 @@ class Program2 {
         // Printing the Custom List using toString method
         System.out.println(cstObj); // * [ 60, 10, 20, 30, 40, 50 ]
         System.out.println(cstObj.size);
+        System.out.println(cstObj.get(5));
     }
 }

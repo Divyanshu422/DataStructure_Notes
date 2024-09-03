@@ -48,6 +48,20 @@ class CustomList {
         size++;
     }
 
+    public Object get(int index) throws Exception {
+        if (index < 0 || index >= size) {
+            throw new Exception("Element does not exist");
+        } else if (head == null) {
+            throw new Exception("List is empty");
+        } else {
+            CustomNode temp = head;
+            for (int i = 0; i < index; i++) {
+                temp = temp.next;
+            }
+            return temp.data;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
