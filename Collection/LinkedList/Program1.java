@@ -16,6 +16,7 @@ class CustomList {
     }
 
     CustomNode head; // * Default value = null
+    CustomNode last;    // * other name can tail or rear
     int size; // * Default value = 0
 
     public void addNode(Object data) {
@@ -25,14 +26,18 @@ class CustomList {
         // * Checking whether head points to null or any other value
         if (head == null) {
             head = nodeObj;
+            last = nodeObj;
         }
         // * If head is not null, then we need to traverse the list to find the last
         else {
-            CustomNode temp = head;
-            while (temp.next != null) {
-                temp = temp.next;
-            }
-            temp.next = nodeObj;
+            // CustomNode temp = head;
+            last.next = nodeObj;
+            last = nodeObj;
+            //  * Reducing the time complexity of adding the element in the last
+            // while (temp.next != null) {
+            //     temp = temp.next;
+            // }
+            // temp.next = nodeObj;
         }
         size++;
     }
