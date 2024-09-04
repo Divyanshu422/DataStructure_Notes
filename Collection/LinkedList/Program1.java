@@ -94,6 +94,17 @@ class CustomList {
         }
     }
 
+    public Object removeFirstNode() throws Exception {
+        if (head == null)
+            throw new Exception("No linkedList exist");
+        else {
+            CustomNode temp = head;
+            head = temp.next;
+            size--;
+            return temp.data;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

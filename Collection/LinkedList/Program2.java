@@ -16,5 +16,9 @@ class Program2 {
         System.out.println(cstObj.removeLastNode()); // * 50
         System.out.println(cstObj); // * [ 60, 10, 70, 20, 30, 40 ]
         System.out.println(cstObj.get(5)); // * 30
+
+        System.out.println(cstObj.removeFirstNode()); // * 60
+        System.out.println(cstObj); // * [ 10, 70, 20, 30, 40 ]
+
     }
 }
