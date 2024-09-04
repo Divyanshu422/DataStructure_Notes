@@ -62,6 +62,22 @@ class CustomList {
         }
     }
 
+    public void insertAtIndex(Object data, int index) {
+        // * Creating the Node when addNode is called
+        CustomNode nodeObj = new CustomNode(data);
+        if (head == null) {
+            head = nodeObj;
+        } else {
+            CustomNode temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            nodeObj.next = temp.next;
+            temp.next = nodeObj;
+        }
+        size++;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
