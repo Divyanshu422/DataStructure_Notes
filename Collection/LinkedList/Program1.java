@@ -78,6 +78,22 @@ class CustomList {
         size++;
     }
 
+    public Object removeLastNode() throws Exception {
+        if (head == null) {
+            throw new Exception("There is no node");
+        } else {
+            CustomNode temp = head;
+            CustomNode temp2 = head.next;
+
+            while (temp2.next != null) {
+                temp = temp.next;
+                temp2 = temp2.next;
+            }
+            temp.next = null;
+            return temp2.data;
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
